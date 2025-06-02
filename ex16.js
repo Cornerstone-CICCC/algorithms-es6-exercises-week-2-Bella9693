@@ -16,7 +16,21 @@ For more information on casing styles, read Wikipedia's Special Case Styles for 
 */
 
 const makeCaze = function (input, caze) {
-  // Put your solution here
+  if (!Array.isArray(caze)) {
+    caze = [caze];
+  }
+
+  const priority = {
+    camel: 1,
+    pascal: 1,
+    snake: 1,
+    kebab: 1,
+    title: 1,
+    vowel: 2,
+    consonant: 2,
+    upper: 3,
+    lower: 3,
+  };
 };
 
 console.log(makeCaze("this is a string", "camel")); // thisIsAString
